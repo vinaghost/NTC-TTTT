@@ -13,7 +13,7 @@
 
 #if !defined _amxmodx_included
 	#if defined AMXMOD_BCOMPAT
-		#include <amxmod>
+		#include <amxmodx>
 	#else
 		#include <amxmodx>
 	#endif
@@ -215,7 +215,7 @@ stock show_activity( id, const name[], const fmt[], any:... )
 		copy(prefix, charsmax(prefix), "PLAYER");
 	}
 	new buffer[512];
-	vformat(buffer, charsmax(buffer), fmt, 3);
+	vformat(buffer, charsmax(buffer), fmt, 4);
 #endif
 	switch(get_pcvar_num(__amx_show_activity))
 	{
@@ -234,7 +234,7 @@ stock show_activity( id, const name[], const fmt[], any:... )
 			new __maxclients=get_maxplayers();
 			
 			
-			for (new i=1; i<__maxclients; i++)
+			for (new i=1; i<=__maxclients; i++)
 			{
 				if (is_user_connected(i))
 				{
@@ -249,7 +249,7 @@ stock show_activity( id, const name[], const fmt[], any:... )
 		{
 			new __maxclients=get_maxplayers();
 			
-			for (new i=1; i<__maxclients; i++)
+			for (new i=1; i<=__maxclients; i++)
 			{
 				if (is_user_connected(i))
 				{
@@ -264,7 +264,7 @@ stock show_activity( id, const name[], const fmt[], any:... )
 		{
 			new __maxclients=get_maxplayers();
 			
-			for (new i=1; i<__maxclients; i++)
+			for (new i=1; i<=__maxclients; i++)
 			{
 				if (is_user_connected(i))
 				{

@@ -11,6 +11,6 @@
 #endif
 #define _svnversion_included
 
-#define AMXX_VERSION		1.80
-#define AMXX_VERSION_NUM	180
-stock const AMXX_VERSION_STR[] = "1.8.0.3660";
+#define AMXX_VERSION		1.82
+#define AMXX_VERSION_NUM	182
+stock const AMXX_VERSION_STR[] = "1.8.2";
